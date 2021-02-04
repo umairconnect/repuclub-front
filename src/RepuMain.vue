@@ -1,6 +1,6 @@
 <template>
 
-  <HelloWorld test="Welcome to my App"/>
+  <HelloWorld test="Project for testing" class="malang"/>
 
     <div id="nav">
         <router-link to="/">test</router-link> |
@@ -10,6 +10,7 @@
 
 </template>
 
+
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -17,7 +18,10 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+    created:function () {
+        alert('this is test')
+    }
 }
 </script>
 
