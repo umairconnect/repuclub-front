@@ -1,27 +1,23 @@
 <template>
-
-  <HelloWorld test="Project for testing" class="malang"/>
-
-    <div id="nav">
-        <router-link to="/">test</router-link> |
-        <router-link to="/login">test</router-link>
-    </div>
+    <repu-header title="Reputation Club"></repu-header>
     <router-view />
-
+    <celebrity-list></celebrity-list>
 </template>
 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RepuHeader from './components/header.vue'
+import CelebrityList from './components/CelebrityList'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  },
-    created:function () {
-        alert('this is test')
-    }
+      RepuHeader,
+      CelebrityList
+  }
 }
 </script>
+<style lang="scss">
+    @import "assets/scss/repu-style";
+</style>
 
