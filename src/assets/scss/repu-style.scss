@@ -5,5 +5,62 @@ header {
   }
 }
 
+.celeb-area {
+  display: flex;
+  align-items: center;
+  .celeb-box {
+    margin: 1rem;
+    border: 1px solid #80808085;
+    padding: 0.5rem;
+    cursor: pointer;
+    img {
+      width: 200px;
+    }
+  }
+}
 /* components start here */
 /* rating UI */
+.rating {
+  float:left;
+}
+.rating:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+
+.rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:200%;
+  color:#ddd;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rating > input:checked ~ label {
+  color: #ea0;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ea0;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+}
+
+.rating > label:active {
+  position:relative;
+  top:2px;
+  left:2px;
+}
